@@ -1,0 +1,5 @@
+weights: "best.pt"
+img-size: 640
+conf-thresh: 0.5
+iou-thresh: 0.5
+device: 'cpu'

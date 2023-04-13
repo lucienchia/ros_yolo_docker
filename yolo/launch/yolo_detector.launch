@@ -1,0 +1,7 @@
+<launch>
+	<node name="yolo_detector" pkg="yolo" type="detect.py" output="screen" >
+	</node>
+       <rosparam file="$(find yolo)/config/yolo_config.yaml" command="load"/>
+       <param name="weights_path" value="$(find yolo)/config/"/>
+	
+</launch>

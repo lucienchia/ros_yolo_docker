@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+
+  <node name="yolo_detector" pkg="yolo" type="detect.py" output="screen" />
+  <rosparam file="$(find yolo)/test/yolo_config.yaml" command="load"/>
+  <param name="weights_path" value="$(find yolo)/test/"/>
+       
+  <test test-name="test_yolo" pkg="yolo" type="test_yolo.py"/>
+  <param name="image_path" value="$(find yolo)/test"/>
+</launch>
